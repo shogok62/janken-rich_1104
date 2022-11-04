@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- <script src="js/jquery-2.1.3.min.js"></script> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title class="title">宿題に疲れたあなたへ</title>
+
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+
+    <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/css/6-3-1.css">
+ 
+</head>
+
+
+
+
+<body>
+
+<!-- 1ページ目：作りたいのは背景動画の上に乗ったコメントとボタン -->
+<div id="page1">
+    
+    <div class="c-video" id="movie">
+        <div class="c-video__title" id="c-video__title">
+            <h2>This is for you who are stressed out <br> because of your programming homework.</h2>
+        </div>
+        <div class="c-video__msg" id="c-video__msg">
+            <h2>What methods do you like?</h2>
+        </div>
+        <video
+        class="c-video__embed"
+        id="c-video__embed"
+        src="img/nature_fall_movie.mp4"
+        poster="img/nature_fall.jpg"
+        width="1440"
+        height="810"
+        loop
+        autoplay
+        muted
+        playsinline
+        ></video>
+        <audio id="page1_sound" source src="sound/top_nature.mp3"></audio>
+
+        <div class="nature_fall_btn_all">
+            <ul class="nature_fall_btn">
+            
+                <li id="songs_btn" a href="" class="btn btn-gradient page1_btn"><span>Music</span></li>
+                <li id="frag_btn" a href="" class="btn btn-gradient page1_btn"><span>Fragrance</span></li>
+                <li id="sports_btn" a href="" class="btn btn-gradient page1_btn"><span>Sports</span></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    <!-- 2ページ目：分岐　3種類のボタン×2種類ずつの演出をそれぞれ -->
+ 
+    <!-- タスク１：ボタン押すまで、下の画面が隠れるように -->
+    <!-- タスク２：ボタンを押すと背景が暗くなって下の画面がランダムで出てくるように -->
+    <!-- タスク３：ボタンを押した後のCSSを整える（画像の大きさ、ボタンのサイズ・場所） -->
+    <!-- ★タスク４：Recommendボタンを押したら画面遷移 ⇒DONE★ -->
+    <!-- タスク５：全体CSSチェック -->
+
+    <!-- 1-1：音楽/JAZZ -->
+
+
+<div class="page2">
+
+    <div id="jazz full-overlay" class="jazz_full-overlay">
+        <div class="img2 jazz_img"><img src="img/jazz_img.png" alt="jazz写真"></div>
+        <div class="inner">
+            <p class="text">心躍る非日常をGeekな仲間と共に・・・</p>
+            <input id="second_btn" class="btn btn-gradient" type="button" value="Recommend Bar" onclick="location.href='https://jazzbird.tokyo/'" />
+        </div>
+        <audio id="page2_sound" source src="sound/music_1_jazz.mp3"></audio>   
+    </div>
+
+    <!-- 1-2：音楽/orchestra -->
+    <div id="orchestra full-overlay" class="orch_full-overlay">
+        <div class="img2 orch_img"><img src="img/orch_img.png" alt="orchestra写真"></div>
+        <div class="inner">
+            <p class="text">クリスマスシーズン×オーケストラと言えば・・・</p>
+            <input id="second_btn" class="btn btn-gradient" type="button" value="Recommend Event" onclick="location.href='https://harmonyjapan.com/doc2022/'" />
+        </div>
+        <audio id="page2_sound" source src="sound/music_2_orch.mp3"></audio>   
+    </div>
+
+    <!-- 2-1：香り/秋：lisn - Japan wind-->
+    <div id="autumn full-overlay" class="autumn_full-overlay">
+        <div class="img2 autumn_img"><img src="img/autumn_img.png" alt="秋写真"></div>
+        <div class="inner">
+            <p class="text">日本の秋を感じる香りをあなたに・・・</p>
+            <input id="second_btn" class="btn btn-gradient" type="button" value="Recommend Incense" onclick="location.href='https://store.lisn.co.jp/shop/g/g823841/'" />
+        </div>
+        <audio id="page2_sound" source src="sound/frag_1_autumn.mp3"></audio>   
+    </div>
+
+    <!-- 2-2：香り/夏：lisn - Hawaii wind -->
+    <div id="summer full-overlay" class="summer_full-overlay">
+        <div class="img2 summer_img"><img src="img/summer_img.png" alt="夏写真"></div>
+        <div class="inner">
+            <p class="text">開放的なハワイの香りをあなたに・・・</p>
+            <input id="second_btn" class="btn btn-gradient" type="button" value="Recommend Incense" onclick="location.href='https://store.lisn.co.jp/shop/g/g823844/'" />
+        </div>
+        <audio id="page2_sound" source src="sound/frag_2_summer.mp3"></audio>   
+    </div>
+
+    <!-- 3-1：スポーツ/ダイビング - ishigaki -->
+    <div id="diving full-overlay" class="diving_full-overlay">
+        <div class="img2 diving_img"><img src="img/diving_img.png" alt="diving写真"></div>
+        <div class="inner">
+            <p class="text">水の音に耳を澄ませて・・・</p>
+            <input id="second_btn" class="btn btn-gradient" type="button" value="Recommend Locate" onclick="location.href='https://ishigaki-tours.com/activitys/diving.html'" />
+        </div>
+        <audio id="page2_sound" source src="sound/sports_1_diving.mp3"></audio>   
+    </div>
+
+    <!-- 3-2：スポーツ/ピラティス - hot yoga -->
+    <div id="pira full-overlay" class="pira_full-overlay">
+        <div class="img2 pira_img"><img src="img/pira_img.png" alt="ピラティス写真"></div>
+        <div class="inner">
+            <p class="text">心身をリセットしてみるのも・・・</p>
+            <input id="second_btn" class="btn btn-gradient" type="button" value="Recommend Studio" onclick="location.href='https://www.hotyoga-caldo.com/ginza9/'" />
+        </div>
+        <audio id="page2_sound" source src="sound/sports_2_pira.mp3"></audio>   
+    </div>
+
+</div>
+
+<script>
+
+    // page1（ボタン3つ+滝）
+    // page1 > page2
+    $(function() {
+        // 非表示にする
+        $(".page1_btn").click(function() {
+        $("#page1").css("display", "none");
+        $('#page1_sound').get(0).pause();
+        $('#page2_sound').get(0).play();
+        
+        });
+        // 表示する
+        $(".page1_btn").click(function() {
+        $("#page2").css({"display":"block"});
+        });
+    });
+
+
+
+// Overlay模範例　ー－－－－－
+
+$(function() {
+  // 「歌・香り・スポーツ」のボタンをクリック
+  $(".show-overlay").on('click', function() {
+    $("#full-overlay").fadeIn();
+  });
+
+// Overlay模範例　ー－－－－－ここまで
+
+
+        // ランダム関数
+        // 乱数を作成
+        const r = Math.ceil(Math.random()*2);
+        // songsを選んだ特の挙動
+        $("#songs_btn").on('click', function(){
+        // if分岐処理
+            if(r==1){
+                $(".jazz_full-overlay").fadeIn();
+                setTimeout(function(){
+                    location.reload();
+                }, 3000);
+            }
+            if(r==2){
+                $(".orch_full-overlay").fadeIn();
+                setTimeout(function(){
+                    location.reload();
+                }, 3000);
+            }
+              });
+
+        // frag（香り）を選んだ特の挙動
+        $('.frag_btn').on('click', function(){
+            // if分岐処理
+            if(r==1){
+                $("#autumn_full-overlay").fadeIn();
+                setTimeout(function(){
+                    location.reload();
+                }, 3000);
+            }
+            if(r==2){
+                $("#summer_full-overlay").fadeIn();
+                setTimeout(function(){
+                    location.reload();
+                }, 3000);
+            }
+
+        });
+
+        // スポーツを選んだ特の挙動
+        $('.sports_btn').on('click', function(){
+            // if分岐処理
+            if(r==1){
+                $("#diving_full-overlay").fadeIn();
+                setTimeout(function(){
+                    location.reload();
+                }, 2000);
+            }
+            if(r==2){
+                $("#pira_full-overlay").fadeIn();
+                setTimeout(function(){
+                    location.reload();
+                }, 3000);
+            }
+                    });
+        // じゃんけん関数（ここまで）
+
+
+
+</script>
+
+
+<!-- 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/test.js"></script> -->
+    
+</body>
+
+</html>

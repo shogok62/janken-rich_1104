@@ -1,5 +1,4 @@
-# gs_code# 
-janken-rich_1104
+# gs_code# janken-rich_1104
 
 課題{番号} -{課題内容}-
 T10 じゃんけんアプリリッチver.
